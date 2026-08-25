@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Royalslegend faceless creator outreach case study by Airacle">
+  <title>Royalslegend Creator Outreach Case｜Airacle</title>
+  <style>
+    :root {
+      --ink: #17201d;
+      --muted: #66716c;
+      --paper: #f6f2e9;
+      --card: #fffdf8;
+      --line: #dcd7cb;
+      --forest: #154c3d;
+      --forest-2: #26715c;
+      --gold: #b98a3d;
+      --rose: #a44742;
+      --blue: #46788a;
+      --shadow: 0 16px 50px rgba(34, 45, 40, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 2%, rgba(185, 138, 61, .13), transparent 28rem),
+        radial-gradient(circle at 94% 18%, rgba(38, 113, 92, .10), transparent 28rem),
+        var(--paper);
+      font: 15px/1.68 Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1160px, calc(100% - 36px)); margin: 0 auto; }
+    .hero { padding: 76px 0 52px; }
+    .eyebrow {
+      display: inline-flex;
+      gap: 9px;
+      align-items: center;
+      padding: 7px 12px;
+      border: 1px solid rgba(21, 76, 61, .2);
+      border-radius: 999px;
+      color: var(--forest);
+      background: rgba(255, 253, 248, .66);
+      font-size: 12px;
+      font-weight: 760;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--gold); }
+    h1 { max-width: 880px; margin: 22px 0 16px; font-size: clamp(40px, 6vw, 76px); line-height: .98; letter-spacing: -.055em; }
+    .hero-copy { max-width: 800px; margin: 0; color: #4f5b56; font-size: clamp(17px, 2vw, 21px); }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; color: var(--muted); font-size: 13px; }
+    .hero-meta b { color: var(--ink); }
+    .kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 10px 0 54px; }
+    .kpi { min-height: 158px; padding: 23px; border: 1px solid rgba(220, 215, 203, .9); border-radius: 22px; background: rgba(255, 253, 248, .84); box-shadow: var(--shadow); }
+    .kpi .value { display: block; color: var(--forest); font-size: clamp(35px, 4vw, 50px); font-weight: 820; line-height: 1; letter-spacing: -.055em; }
+    .kpi .label { display: block; margin-top: 12px; font-weight: 760; }
+    .kpi .note { display: block; margin-top: 5px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+    section { padding: 20px 0 48px; }
+    .section-head { display: grid; grid-template-columns: 170px 1fr; gap: 34px; margin-bottom: 22px; }
+    .section-index { color: var(--gold); font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: -6px 0 8px; font-size: clamp(29px, 4vw, 43px); line-height: 1.1; letter-spacing: -.035em; }
+    .section-intro { max-width: 780px; margin: 0; color: var(--muted); }
+    .panel { border: 1px solid var(--line); border-radius: 24px; background: var(--card); box-shadow: var(--shadow); overflow: hidden; }
+    .panel-pad { padding: 28px; }
+    .flow { display: grid; grid-template-columns: repeat(5, 1fr); }
+    .step { position: relative; min-height: 202px; padding: 25px 22px; border-right: 1px solid var(--line); }
+    .step:last-child { border-right: 0; }
+    .step-num { color: var(--gold); font-size: 12px; font-weight: 850; letter-spacing: .12em; }
+    .step h3 { margin: 29px 0 9px; font-size: 18px; line-height: 1.2; }
+    .step p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.55; }
+    .grid-2 { display: grid; grid-template-columns: 1.04fr .96fr; gap: 18px; }
+    .mini-title { margin: 0 0 18px; font-size: 18px; }
+    .bars { display: grid; gap: 15px; }
+    .bar-row { display: grid; grid-template-columns: minmax(130px, 1fr) 2fr 58px; gap: 12px; align-items: center; }
+    .bar-label { font-size: 13px; }
+    .track { height: 10px; border-radius: 999px; background: #ebe7dd; overflow: hidden; }
+    .fill { height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--forest), var(--forest-2)); }
+    .bar-value { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; font-size: 12px; }
+    .checks { display: grid; gap: 13px; margin: 0; padding: 0; list-style: none; }
+    .checks li { display: grid; grid-template-columns: 25px 1fr; gap: 10px; align-items: start; }
+    .check { display: grid; place-items: center; width: 21px; height: 21px; margin-top: 1px; border-radius: 50%; color: white; background: var(--forest); font-size: 12px; font-weight: 900; }
+    .checks b { display: block; }
+    .checks span:last-child { color: var(--muted); font-size: 13px; }
+    .mail-head { display: flex; justify-content: space-between; gap: 20px; padding: 20px 25px; color: white; background: var(--forest); }
+    .mail-head b { display: block; }
+    .mail-head span { color: rgba(255,255,255,.72); font-size: 12px; }
+    .mail-body { padding: 28px; }
+    .mail-body pre { margin: 0; white-space: pre-wrap; color: #2b3531; font: 14px/1.72 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+    .chip { padding: 6px 10px; border-radius: 999px; color: var(--forest); background: #e7efe9; font-size: 12px; font-weight: 730; }
+    .timeline { display: grid; grid-template-columns: repeat(10, 1fr); gap: 7px; }
+    .batch { min-height: 118px; padding: 14px 10px; border-radius: 14px; color: white; background: var(--forest); }
+    .batch:last-child { background: var(--gold); }
+    .batch b { display: block; font-size: 22px; }
+    .batch span { display: block; margin-top: 28px; color: rgba(255,255,255,.74); font-size: 10px; line-height: 1.35; }
+    .formula { margin: 18px 0 0; padding: 14px 17px; border-left: 3px solid var(--gold); color: var(--muted); background: #f3efe5; font-size: 13px; }
+    .response-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 18px; }
+    .response-stack { display: grid; gap: 10px; }
+    .response-row { display: grid; grid-template-columns: 140px 1fr 80px; gap: 14px; align-items: center; padding: 16px 18px; border: 1px solid var(--line); border-radius: 15px; }
+    .response-row b { font-size: 13px; }
+    .response-row .count { color: var(--forest); font-size: 22px; font-weight: 850; text-align: right; }
+    .response-row .desc { color: var(--muted); font-size: 12px; }
+    .quote-card { display: flex; flex-direction: column; justify-content: space-between; min-height: 100%; padding: 25px; color: white; border-radius: 22px; background: linear-gradient(145deg, #154c3d, #0f352b); }
+    .quote-card .big { font-size: clamp(42px, 6vw, 64px); font-weight: 850; letter-spacing: -.055em; line-height: 1; }
+    .quote-card p { color: rgba(255,255,255,.73); }
+    .quote-card small { color: rgba(255,255,255,.57); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 14px 15px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+    th { color: var(--muted); background: #f4f0e7; font-size: 11px; letter-spacing: .07em; text-transform: uppercase; }
+    td { font-size: 13px; }
+    tr:last-child td { border-bottom: 0; }
+    .tag { display: inline-block; padding: 3px 8px; border-radius: 999px; background: #edf2ef; font-size: 11px; white-space: nowrap; }
+    .insights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .insight { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+    .insight .n { color: var(--gold); font-size: 12px; font-weight: 850; }
+    .insight h3 { margin: 18px 0 8px; font-size: 17px; }
+    .insight p { margin: 0; color: var(--muted); font-size: 13px; }
+    .notice { padding: 20px 24px; border: 1px solid #dfc7a1; border-radius: 18px; color: #665027; background: #fff7e8; }
+    footer { margin-top: 24px; padding: 36px 0 54px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+    .footer-row { display: flex; justify-content: space-between; gap: 18px; }
+    @media (max-width: 900px) {
+      .kpis { grid-template-columns: repeat(2, 1fr); }
+      .flow { grid-template-columns: 1fr; }
+      .step { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+      .step:last-child { border-bottom: 0; }
+      .step h3 { margin-top: 12px; }
+      .grid-2, .response-grid { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: repeat(5, 1fr); }
+      .insights { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .hero { padding-top: 48px; }
+      .section-head { grid-template-columns: 1fr; gap: 8px; }
+      .kpis { grid-template-columns: 1fr; }
+      .timeline { grid-template-columns: repeat(2, 1fr); }
+      .bar-row { grid-template-columns: 120px 1fr 46px; }
+      .response-row { grid-template-columns: 1fr 55px; }
+      .response-row .desc { grid-column: 1 / -1; }
+      .mail-head, .footer-row { flex-direction: column; }
+      .panel-pad, .mail-body { padding: 20px; }
+    }
+    @media print {
+      body { background: white; }
+      .hero { padding-top: 24px; }
+      .panel, .kpi { box-shadow: none; break-inside: avoid; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Airacle · Creator Outreach Case</span>
+      <h1>从 1,000 位博主<br>到第一轮有效报价</h1>
+      <p class="hero-copy">Royalslegend 美国市场无露脸内容创作者建联案例：用公开社交数据建立候选池，补齐 1,000 个邮箱，以一封短邮件询问适配度与底价，再通过 Resend 分批触达。</p>
+      <div class="hero-meta">
+        <span><b>市场</b> 美国</span>
+        <span><b>方向</b> Faceless product video</span>
+        <span><b>品类</b> Porcelain tableware &amp; tea lifestyle</span>
+        <span><b>统计截至</b> 2026-08-25</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="kpis">
+      <article class="kpi"><span class="value">1,000</span><span class="label">有邮箱的创作者</span><span class="note">每行均保留公开邮箱来源和匹配内容证据</span></article>
+      <article class="kpi"><span class="value">989</span><span class="label">唯一收件邮箱</span><span class="note">11 行因邮箱重复被 held，唯一率 98.9%</span></article>
+      <article class="kpi"><span class="value">19</span><span class="label">已知有效回复</span><span class="note">明确报价、主动索要 Brief 或发送 Rate Card</span></article>
+      <article class="kpi"><span class="value">1.92%</span><span class="label">有效回复率</span><span class="note">19 ÷ 989；按进入发送/排期队列人数计算</span></article>
+    </div>
+
+    <section>
+      <div class="section-head">
+        <div class="section-index">01 · Workflow</div>
+        <div><h2>完整执行链路</h2><p class="section-intro">不是先批量发信再判断匹配，而是把内容相关性、公开邮箱和可回溯证据放在发送前完成。</p></div>
+      </div>
+      <div class="panel flow">
+        <article class="step"><span class="step-num">STEP 01</span><h3>定义 Creator ICP</h3><p>美国市场；家居生活、hosting、tablescape、茶生活、home café；优先适合无露脸产品展示的个人创作者。</p></article>
+        <article class="step"><span class="step-num">STEP 02</span><h3>多关键词召回</h3><p>围绕产品场景组织 63 组 YouTube 搜索；首轮获得 915 个视频结果、577 个唯一频道，并结合 TikTok 等候选继续扩展。</p></article>
+        <article class="step"><span class="step-num">STEP 03</span><h3>复核与补邮箱</h3><p>排除品牌、店铺、聚合媒体、非美国账号、近期无相关内容和疑似搬运号；补查主页与公开社交入口，直到 1,000 位都有邮箱。</p></article>
+        <article class="step"><span class="step-num">STEP 04</span><h3>去重与个性化</h3><p>以标准化邮箱去重；相同邮箱保留匹配分更高的一行。989 位进入发送名单，每人写入独立 first_name。</p></article>
+        <article class="step"><span class="step-num">STEP 05</span><h3>短邮件询底价</h3><p>不公开品牌名，只说明真实品类、参考风格、寄样与交付节奏；唯一 CTA 是回复邮件并给出 one-video best rate。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-index">02 · Creator Pool</div>
+        <div><h2>最终触达名单结构</h2><p class="section-intro">源表 1,000 位全部有邮箱；去重后 989 个唯一邮箱。YouTube 是主要公开邮箱发现入口，最终交付账号也包含 TikTok。</p></div>
+      </div>
+      <div class="grid-2">
+        <div class="panel panel-pad">
+          <h3 class="mini-title">内容品类</h3>
+          <div class="bars">
+            <div class="bar-row"><span class="bar-label">家居生活 / hosting</span><span class="track"><span class="fill" style="width:45.6%"></span></span><span class="bar-value">451 · 45.6%</span></div>
+            <div class="bar-row"><span class="bar-label">餐具 / tablescape</span><span class="track"><span class="fill" style="width:35.9%"></span></span><span class="bar-value">355 · 35.9%</span></div>
+            <div class="bar-row"><span class="bar-label">咖啡 / home café</span><span class="track"><span class="fill" style="width:9.3%"></span></span><span class="bar-value">92 · 9.3%</span></div>
+            <div class="bar-row"><span class="bar-label">茶生活 / 功夫茶</span><span class="track"><span class="fill" style="width:9.2%"></span></span><span class="bar-value">91 · 9.2%</span></div>
+          </div>
+        </div>
+        <div class="panel panel-pad">
+          <h3 class="mini-title">名单质量规则</h3>
+          <ul class="checks">
+            <li><span class="check">✓</span><span><b>100% 有公开邮箱</b>邮箱放在 YouTube About、社交主页或公开业务入口，并保留来源 URL。</span></li>
+            <li><span class="check">✓</span><span><b>100% 有社交账号链接</b>每位创作者有唯一 delivery social link，并附匹配视频素材链接。</span></li>
+            <li><span class="check">✓</span><span><b>相关内容优先</b>以餐桌、待客、茶、咖啡和家居生活场景判断产品自然植入空间。</span></li>
+            <li><span class="check">✓</span><span><b>邮箱级去重</b>11 个重复邮箱行不重复触达，避免同一经纪或收件箱收到多封。</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-index">03 · Outreach</div>
+        <div><h2>实际建联内容</h2><p class="section-intro">本轮采用单版本正文，没有同时更改多个变量。标题必须以 “Paid” 开头，品牌名不在首封邮件公开，CTA 只要求回复适配度和尽可能低的单条报价。</p></div>
+      </div>
+      <div class="panel">
+        <div class="mail-head">
+          <div><span>Subject</span><b>Paid Faceless Video Collaboration</b></div>
+          <div><span>From</span><b>Airacle-mkt-agency &lt;airacle@info.airacle.com&gt;</b></div>
+        </div>
+        <div class="mail-body">
+          <pre>Hi {{{contact.first_name|there}}},
+
+I’m Hokeem from Airacle, a global creator marketing agency.
+
+We’re working with a porcelain tableware and tea lifestyle brand and are looking for a paid faceless product video in a style similar to this:
+https://www.tiktok.com/@sotoms
+
+Would this style be a good fit for you? If yes, please reply with your best possible rate for one video.
+
+We’ll provide the product. Delivery usually takes around 10 days, and we’d need the first draft within 7 days after it arrives.
+
+Best,
+Hokeem
+Airacle
+
+You can learn more about us here:
+https://airacle.tech/en/
+
+Unsubscribe: {{{RESEND_UNSUBSCRIBE_URL}}}</pre>
+          <div class="chips"><span class="chip">简短口语化</span><span class="chip">首封不公开品牌名</span><span class="chip">含案例账号</span><span class="chip">说明寄样与时间</span><span class="chip">CTA：回复底价</span><span class="chip">动态称呼 + 退订变量</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-index">04 · Sending</div>
+        <div><h2>Resend 分批发送</h2><p class="section-intro">989 个唯一邮箱被拆成 10 批；前 9 批各 100 人，最后一批 89 人。第一批即时发送，其余按约一小时窗口排期。</p></div>
+      </div>
+      <div class="panel panel-pad">
+        <div class="timeline" aria-label="10 send batches">
+          <div class="batch"><b>100</b>Batch 01<span>Immediate<br>16:59 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 02<span>18:23 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 03<span>19:23 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 04<span>20:23 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 05<span>21:23 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 06<span>22:23 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 07<span>23:23 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 08<span>00:23 UTC</span></div>
+          <div class="batch"><b>100</b>Batch 09<span>01:23 UTC</span></div>
+          <div class="batch"><b>89</b>Batch 10<span>02:23 UTC</span></div>
+        </div>
+        <p class="formula">发送记录口径：10 个 Broadcast 均已创建并保存为 <b>sent_and_scheduled</b>。执行中曾遇到 Resend contacts quota，升级后继续完成排期。当前文件没有保存逐封 delivered / bounced / suppressed / complaint / open / click Webhook，因此这些指标标记为 <b>not collected</b>。</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-index">05 · Results</div>
+        <div><h2>回复与报价结果</h2><p class="section-intro">截至 2026-08-25，共整理出 19 位有效回复：能够直接进入价格比较，或明确表达兴趣并索要合作细节。</p></div>
+      </div>
+      <div class="response-grid">
+        <div class="panel panel-pad response-stack">
+          <div class="response-row"><b>明确正文报价</b><span class="desc">已给出一个或多个视频/平台价格，可进入第一轮比较</span><span class="count">12</span></div>
+          <div class="response-row"><b>需补 Brief</b><span class="desc">有兴趣，但先问产品、平台、时长、授权、投流或预算</span><span class="count">6</span></div>
+          <div class="response-row"><b>Rate Card 附件</b><span class="desc">已发送报价附件，正文无价格，等待单独解析</span><span class="count">1</span></div>
+        </div>
+        <aside class="quote-card">
+          <div><div class="big">$325</div><p>12 位明确报价者的“最低可见入口报价”中位数。</p></div>
+          <small>仅作方向性参考：不同报价对应 UGC、账号发布、YouTube integration、授权、raw footage 与修改次数，尚未标准化为同一交付口径。</small>
+        </aside>
+      </div>
+      <div class="panel" style="margin-top:18px">
+        <table>
+          <thead><tr><th>指标</th><th>结果</th><th>计算方式</th><th>解释</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag">Primary</span> 已知有效回复率</td><td><b>1.92%</b></td><td>19 ÷ 989</td><td>按进入发送/排期队列人数计算；不是 delivered-based rate。</td></tr>
+            <tr><td>明确报价获取率</td><td><b>1.21%</b></td><td>12 ÷ 989</td><td>首封邮件直接拿到正文价格。</td></tr>
+            <tr><td>补 Brief 后报价机会率</td><td><b>0.61%</b></td><td>6 ÷ 989</td><td>对方已有兴趣，但需要更多商业条款。</td></tr>
+            <tr><td>附件报价线索率</td><td><b>0.10%</b></td><td>1 ÷ 989</td><td>Rate Card 尚未拆解。</td></tr>
+            <tr><td>明确报价回复构成</td><td><b>63.2%</b></td><td>12 ÷ 19</td><td>在已知有效回复中，近三分之二直接给价。</td></tr>
+            <tr><td>唯一邮箱率</td><td><b>98.9%</b></td><td>989 ÷ 1,000</td><td>11 行重复邮箱被 held。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div class="section-index">06 · Learnings</div>
+        <div><h2>这轮验证了什么</h2><p class="section-intro">邮件足够短，能够快速取得价格锚点；但下一轮要让报价更可比，需要在保持简洁的同时补齐最少量的交付边界。</p></div>
+      </div>
+      <div class="insights">
+        <article class="insight"><span class="n">01</span><h3>“询底价”确实能直接拿报价</h3><p>12 位直接给出价格，入口价从 $150 延伸到 $3,800。11 位至少有一个 $150–$700 的可见选项，另有 1 位属于明显高价媒体型合作。</p></article>
+        <article class="insight"><span class="n">02</span><h3>参考案例降低了理解成本</h3><p>用 faceless 案例账号代替长篇创意说明，让创作者能快速判断自己是否适合，同时避免首封邮件变成完整 Brief。</p></article>
+        <article class="insight"><span class="n">03</span><h3>价格仍然不是同一口径</h3><p>回复集中追问时长、UGC 还是账号发布、使用权、投流期限、修改次数和发布时间。没有这些边界，最低价只能用于初筛。</p></article>
+        <article class="insight"><span class="n">04</span><h3>下一封应使用标准化 Mini Brief</h3><p>对 6 位待补信息创作者统一回复：具体产品、视频时长、发布平台、usage rights、paid ads、修改次数、交付时间与寄送国家。</p></article>
+        <article class="insight"><span class="n">05</span><h3>高风险付款条件单独核验</h3><p>对要求 50% PayPal 预付款、合作模式偏媒体分发的报价，不直接进入签约，应先核实账号所有权、过往案例与合同主体。</p></article>
+        <article class="insight"><span class="n">06</span><h3>下一轮实验一次只测一个变量</h3><p>本轮只有单版本，不能判断标题或正文的因果效果。下一轮保持正文不变，只测试 Subject，并按平台、体量与品类平衡分组。</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="notice"><b>数据口径说明：</b>本报告的 19 位是已整理的有效/积极回复，不代表邮箱中所有自动回复、拒绝或未分类邮件的总量。由于没有逐封 Webhook 事件日志，Delivered、Bounce、Suppression、Complaint、Unsubscribe、Open 和 Click 均不推算为 0；如后续补齐事件数据，应优先把主指标改为 qualified replies ÷ delivered。</div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row"><span>Royalslegend Creator Outreach Case · Airacle</span><span>Privacy-safe report: no creator emails, private reply text, API keys or provider secrets.</span></div>
+  </footer>
+</body>
+</html>
