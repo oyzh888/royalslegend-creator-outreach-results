@@ -1,0 +1,11 @@
+{
+  "rows": 500,
+  "unique_emails": 500,
+  "unique_channels": 500,
+  "unique_videos": 500,
+  "domains": 126,
+  "dns_valid_domains": 126,
+  "invalid_domains": [],
+  "missing_email_rows": 0,
+  "under_1k_rows": 0
+}
